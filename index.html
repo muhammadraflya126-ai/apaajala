@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pilih Hiburan</title>
+</head>
+<body>
+
+<h2>Lagi pengen hiburan apa?</h2>
+
+<button onclick="hasil('Nonton Bioskop')">Di Dalam Ruangan</button>
+<button onclick="hasil('Taman Kota')">Di Luar Ruangan</button>
+
+<p id="jawaban"></p>
+
+<script>
+function hasil(tempat) {
+  document.getElementById("jawaban").innerHTML =
+  "Rekomendasi Hiburan: " + tempat;
+}
+</script>
+
+</body>
+</html>
