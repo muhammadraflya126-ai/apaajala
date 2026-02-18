@@ -2,19 +2,68 @@
 <html>
 <head>
 <title>Pilih Hiburan</title>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcc00;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.card {
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+</style>
+
 </head>
 <body>
 
-<h2>Lagi pengen hiburan apa?</h2>
+<div class="card">
+<h2>🎉 Mau Hiburan Apa Hari Ini? 🎉</h2>
 
-<button onclick="hasil('Nonton Bioskop')">Di Dalam Ruangan</button>
-<button onclick="hasil('Taman Kota')">Di Luar Ruangan</button>
+<p>Pilih suasana dulu:</p>
+<button onclick="lanjut('rame')">Rame</button>
+<button onclick="lanjut('tenang')">Tenang</button>
 
-<p id="jawaban"></p>
+<p id="lanjutan"></p>
+<h3 id="hasil"></h3>
+</div>
 
 <script>
+function lanjut(suasana) {
+  if (suasana == 'rame') {
+    document.getElementById("lanjutan").innerHTML =
+    "<button onclick=\"hasil('Mall 🏬')\">Mall</button> \
+     <button onclick=\"hasil('Bioskop 🎬')\">Bioskop</button> \
+     <button onclick=\"hasil('Karaoke 🎤')\">Karaoke</button>";
+  } else {
+    document.getElementById("lanjutan").innerHTML =
+    "<button onclick=\"hasil('Pantai 🏖️')\">Pantai</button> \
+     <button onclick=\"hasil('Taman 🌳')\">Taman</button> \
+     <button onclick=\"hasil('Perpustakaan 📚')\">Perpustakaan</button>";
+  }
+}
+
 function hasil(tempat) {
-  document.getElementById("jawaban").innerHTML =
+  document.getElementById("hasil").innerHTML =
   "Rekomendasi Hiburan: " + tempat;
 }
 </script>
