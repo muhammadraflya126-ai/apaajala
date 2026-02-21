@@ -1,46 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pilih Hiburan</title>
-<style>
-body {
-  font-family: Arial;
-  text-align: center;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  color: white;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: #ffcc00;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: orange;
-}
-</style>
+    <title>Galeri Foto Kita</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h2>🎉 Mau Hiburan Apa Hari Ini? 🎉</h2>
+<h1>📸 Kenangan Kita</h1>
 
-<button onclick="pilih('Bioskop 🎬')">Bioskop</button>
-<button onclick="pilih('Pantai 🏖️')">Pantai</button>
-<button onclick="pilih('Mall 🏬')">Mall</button>
-
-<h3 id="hasil"></h3>
-
-<script>
-function pilih(tempat) {
-  document.getElementById("hasil").innerHTML =
-  "Rekomendasi Hiburan: " + tempat;
-}
-</script>
+<div class="galeri">
+    <img src="images/foto1.jpg">
+    <img src="images/foto2.jpg">
+</div>
 
 </body>
 </html>
